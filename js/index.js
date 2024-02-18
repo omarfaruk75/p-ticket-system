@@ -14,14 +14,15 @@
     for(const seat of seatBtn){
       seat.addEventListener('click', function(e){
       count = parseInt(count - 1);
-      totalPrice = parseInt(totalPrice + 500);
+      totalPrice = parseInt(totalPrice + 550);
       
       seatPerCount = parseInt(seatPerCount + 1);
       const seatName = e.target.innerText;
       e.target.style.backgroundColor = '#1DD100';
+      e.target.style.color = '#ffffff';
       e.target.setAttribute('disabled',true);
       const seatCategory = 'Economy';
-      const seatPerPrice = 500;
+      const seatPerPrice = 550;
       const selectTargetName = document.getElementById('seat-name');
       const selectTargetClass = document.getElementById('seat-class');
       const selectTargetPrice = document.getElementById('price-per-seat');
@@ -81,11 +82,7 @@
             discountField.appendChild(discountPriceName);
             const grandPrice = parseInt(totalPrice * 0.8);
             selectedSeats('grand-price', grandPrice);
-        } else {
-            alert('Please input a valid coupon code.');
-        }
-    } else if (totalPrice >= 1500) {
-        if (coupanCode === 'NEW15') {
+        } else if(coupanCode === 'NEW15'){
             const discountPrice = totalPrice * 0.15;
             const p4 = document.createElement('p');
             p4.innerText = "Discount Amount";
@@ -100,7 +97,7 @@
         }
     } else {
         alert('You are not eligible for a discount.');
-    }
+}
 });
 
 function selectedSeats(id, value){
