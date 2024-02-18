@@ -215,7 +215,7 @@
                         <img src="./images/info-devider.png" alt="">
                         <div class="w-1/5 lg:w-1/4 flex flex-col justify-center items-center space-y-6">
                             <img src="./images/fare.png" alt="">
-                            <h3 class="text-3xl"><span id="seat-price">0</span>Taka</h3>
+                            <h3 class="text-3xl"><span id="seat-price">500</span>Taka</h3>
                             <p class="text-[#03071299]">Per Seat</p>
                         </div>
 
@@ -454,11 +454,13 @@
                             <div class=" px-4">
                                 <div id="seat-category-price" class="">
                                     <ul class="flex flex-row justify-between font-bold  list-none">
-                                        <li>Seat<span id="seat-count" class="seat-per-count">0</span> <span
-                                                id="seat-name" class="font-normal"></span>
+                                        <li>Seat<span id="seat-count"
+                                                class="seat-per-count bg-[#1DD100] px-2 text-white rounded-full">
+                                                0</span>
+                                            <span id="seat-name" class="font-normal"></span>
                                         </li>
                                         <li>Class <span id="seat-class" class="font-normal"></span></li>
-                                        <li>Price <span id="price-per-price" class="font-normal"> </span></li>
+                                        <li>Price <span id="price-per-seat" class="font-normal"> </span></li>
                                     </ul>
                                 </div>
 
@@ -469,11 +471,14 @@
                                     <p id="">BDT <span id="total-price">0</span></p>
                                 </div>
                                 <div class="bg-[#ffffff]  flex flex-row justify-around mt-3">
-                                    <input type="text" placeholder="write your name">
-                                    <button class=" px-3 py-1 rounded-xl bg-[#1DD100] text-white">Apply</button>
+                                    <input type="text" placeholder="write your name" id="input-field">
+                                    <button class=" px-3 py-1 rounded-xl bg-[#1DD100] text-white"
+                                        id="apply-btn">Apply</button>
                                 </div>
                                 <hr>
+                                <div id="discount-price" class="flex flex-row justify-between"></div>
                                 <div class="flex flex-row justify-between total-price mt-3">
+
                                     <p id="">Grand Price</p>
                                     <p id="">BDT <span id="grand-price">0</span></p>
 
@@ -481,17 +486,17 @@
                             </div>
                             <form action="" class="mt-4 space-y-4 flex flex-col rounded-2xl">
                                 <label for="name">Passenger Name*</label>
-                                <input type="text" name="name" id="" placeholder=" Enter Your Name">
+                                <input type="text" name="name" id="" placeholder=" Enter Your Name" required>
 
                                 <label for="phone">Phone Number*</label>
-                                <input type="number" name="phone" id="" placeholder=" Enter Your Phone Number">
+                                <input type="number" name="phone" id="" placeholder=" Enter Your Phone Number" required>
 
                                 <label for="email">Email ID</label>
                                 <input type="text" name="email" id="" placeholder=" Enter Email ID">
                                 <!-- Open the modal using ID.showModal() method -->
 
 
-                                <button class="btn bg-[#1DD100] text-white rounded-xl py-2"
+                                <button class="btn bg-[#1DD100] text-white rounded-xl py-2 "
                                     onclick="my_modal_1.showModal() ">Next</button>
                                 <dialog id="my_modal_1" class="modal">
                                     <div class="modal-box text-center flex flex-col items-center justify-center">
