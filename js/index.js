@@ -1,5 +1,5 @@
 
-
+ 
     const seatBtn = document.getElementsByClassName('seat-btn');
     let count = 40;
     let seatPrice = 0;
@@ -7,7 +7,7 @@
     let grandPrice = 0 ;
     let coupleDiscount;   
     let coupanDiscount;   
- 
+    
 
     for(const seat of seatBtn){
       seat.addEventListener('click', function(e){
@@ -30,7 +30,12 @@
        const p3 =document.createElement('p');
        p3.innerText = seatPerPrice;
        selectTargetPrice.appendChild(p3);
-       
+       if(seatPrice === 2000){{
+        alert('four ticket purchsae');
+        return;
+       }
+
+       }
 
         selectedSeats('total-seat', count);
         selectedSeats('seat-price', seatPrice);
@@ -46,6 +51,9 @@
     }
 function selectedSeats(id, value){
       document.getElementById(id).innerText = value;
+}
+function ticketBooking(){
+    document.getElementById('ticket-booking');
 }
 
 
